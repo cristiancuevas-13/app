@@ -33,8 +33,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")#se debe modificar esta linea, asi como esta
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1:8000',
-    'practicadjango7735-gmfnbuabb2bedkfw.eastus2-01.azurewebsites.net'
+    '127.0.0.1', # Quita el puerto, solo debe ir el host/IP
+    'localhost', # (Opcional, pero recomendado para desarrollo local)
+    'practicadjango7735-gmfnbuanb2bedkfw.eastus2-01.azurewebsites.net'
 ]
 
 CSRF_TRUSTED_ORIGINS =[os.getenv("DOMINIO")] #se debe agregar esta nueva linea
