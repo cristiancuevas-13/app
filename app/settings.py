@@ -32,7 +32,11 @@ SECRET_KEY = os.getenv("SECRET_KEY")#se debe modificar esta linea, asi como esta
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'practicadjango7735-gmfnbuabb2bedkfw.eastus2-01.azurewebsites.net'
+]
 
 CSRF_TRUSTED_ORIGINS =[os.getenv("DOMINIO")] #se debe agregar esta nueva linea
 
