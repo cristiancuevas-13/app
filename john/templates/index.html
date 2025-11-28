@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC UNIVERSO: LA BOVÉDA | Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300,400,700&display=swap');
+:root {
+    --primary-color: #004c97; 
+    --secondary-color: #fdd835; 
+    --accent-color: #e53935; 
+    --text-dark: #121212;
+    --text-light: #ffffff;
+    --background-dark: #1a1a1a; 
+    --card-background: #2e2e2e;
+    --border-color: #444;
+    --shadow-dark: 0 8px 20px rgba(0, 0, 0, 0.7);
+    --shadow-light: 0 12px 25px rgba(0, 0, 0, 0.9);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-light);
+    background-color: var(--background-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex-grow: 1;
+    padding: 40px 30px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+header {
+    background: var(--text-dark);
+    color: var(--text-light);
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    border-bottom: 5px solid var(--primary-color);
+}
+.logo {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 5px var(--primary-color);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s; border-radius: 0.3s;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+nav ul li a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+}
+nav ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 4em;
+    color: var(--secondary-color);
+    text-shadow: 3px 3px 5px var(--text-dark);
+    margin-bottom: 10px;
+}
+h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-align: center;
+    text-transform: uppercase;
+}
+.page-header {
+    text-align: center;
+    padding: 70px 40px;
+    margin-bottom: 50px;
+    background-color: var(--card-background);
+    border-radius: 15px;
+    box-shadow: var(--shadow-dark);
+    border-left: 8px solid var(--secondary-color);
+}
+.content-section {
+    background: var(--card-background);
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-dark);
+}
+.hero {
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i.pinimg.com/1200x/3e/24/ad/3e24ad71cff3d8e493138a59c963a3ab.jpg') no-repeat center center/cover;
+    padding: 180px 40px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 30px rgba(229, 57, 53, 0.7);
+}
+.hero p {
+    font-size: 1.4em;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 40px;
+}
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 18px 45px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    cursor: pointer;
+}
+.cta-button:hover {
+    background-color: #ffc107;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(253, 216, 53, 0.5);
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.news-card{
+    background:var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-dark);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.news-card:hover{
+    transform: translate(-5px);
+    box-shadow: var(--shadow-hover);
+}
+.new-image{
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.news-content {
+    padding: 20px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+.news-content h3 {
+    font-family: 'Anton', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    white-space: normal;
+}
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.character-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0;
+    text-align: center;
+    box-shadow: var(--shadow-dark);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.character-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.char-image {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: top center;
+    border-bottom: 4px solid var(--primary-color);
+    transition: transform 0.4s;
+}
+
+.character-card:hover .char-image {
+    transform: scale(1.05);
+}
+
+.char-details {
+    padding: 15px;
+}
+
+.char-details h3 {
+    font-family: 'Anton', sans-serif;
+    color: var(--accent-color);
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.timeline {
+    border-left: 5px solid var(--secondary-color); 
+    padding-left: 40px; 
+    position: relative;
+    padding-top: 20px;
+}
+.timeline-event {
+    margin-bottom: 60px; 
+    padding-bottom: 20px;
+    position: relative;
+    background: var(--text-dark); 
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    background: var(--accent-color);
+    border: 5px solid var(--background-dark); 
+    border-radius: 50%;
+    left: -53px; 
+    top: 30px;
+    z-index: 1;
+}
+.timeline-event h3 {
+    font-family: 'Anton', sans-serif;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    color: var(--text-dark);
+    font-size: 1.8em;
+}
+.timeline-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin-top: 15px;
+    border: 2px solid var(--primary-color);
+}
+footer {
+    background: var(--text-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-top: 5px solid var(--accent-color);
+    font-size: 1em;
+}
+   @media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .hero {
+        padding: 120px 20px;
+    }
+    .timeline {
+        padding-left: 20px;
+    }
+    .timeline-event {
+        padding: 20px;
+    }
+    .timeline-event::before {
+        left: -42px;
+    }
+}
+</style>
+<body>
+    <header>
+        <div class="logo">DC UNIVERSO: LA BOVÉDA</div>
+        <nav>
+            <ul>
+                <li><a href="{%url 'secundario'%}" href="index.html" class="active">INICIO</a></li>
+                <li><a href="personajes.html">PERSONAJES</a></li>
+                <li><a href="historia.html">HISTORIA DC</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 700px;background-image: url('https://i.pinimg.com/1200x/3e/24/ad/3e24ad71cff3d8e493138a59c963a3ab.jpg');background-repeat: no-repeat;background-size: cover;">
+            <h1>BIENVENIDO AL CORAZÓN DEL MULTIVERSO</h1>
+            <p>Descubre las leyendas, los mitos y los héroes que han definido generaciones. La verdad sobre DC Comics comienza aquí.</p>
+            <a href="personajes.html" class="cta-button">EXPLORAR PERSONAJES</a>
+        </section>
+
+        <section class="content-section">
+            <h2>ARCHIVOS: ÚLTIMAS TRANSMISIONES</h2>
+            <div class="news-grid">
+                
+                <article class="news-card">
+                    <div class="news-image" style="height: 700px;background-image: url('https://images.cdn3.buscalibre.com/fit-in/360x360/fc/d5/fcd5e2e836fe2246031ea35ad920273c.jpg'); background-repeat: no-repeat; background-size: cover;"></div>
+                    <div class="news-content">
+                        <h3>El Regreso del Caballero Blanco</h3>
+                        <p>Analizamos el impacto del nuevo arco argumental en la vida de Batman y el Joker.</p>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image" style="height: 700px;background-image: url('https://images.cdn2.buscalibre.com/fit-in/360x360/6b/c5/6bc5c27c491c4a8f220527da634ff05b.jpg');background-repeat: no-repeat; background-size: cover;"></div>
+                    <div class="news-content">
+                        <h3>La Liga de la Justicia en Crisis</h3>
+                        <p>Reporte sobre la posible disolución del equipo tras los eventos de Darkseid.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image" style="height: 700px;background-image: url('https://preview.redd.it/will-black-adam-and-shazam-finally-fight-in-the-dcu-v0-usk2kohodxac1.jpg?width=600&format=pjpg&auto=webp&s=a053ca88be784ac22bd3e3ac587229a2c97140cd');"></div>
+                    <div class="news-content">
+                        <h3>Shazam y Black Adam: El Enfrentamiento</h3>
+                        <p>Detalles exclusivos sobre el próximo gran evento mágico en DC.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>LA TRINIDAD: FUNDACIÓN</h2>
+            <div style="display: flex; justify-content: space-around; gap: 30px; text-align: center; margin-top: 30px;">
+                <div style="flex: 1;">
+                    <div class="char-image" style="height: 500px; background-image: url('https://i.pinimg.com/736x/c2/c7/d6/c2c7d64ce58f78448fa40bf158b9818a.jpg'); border-bottom: 3px solid var(--secondary-color);"></div>
+                    <h3 style="color: var(--primary-color);">Superman</h3>
+                </div>
+                <div style="flex: 1;">
+                    <div class="char-image" style="height: 500px; background-image: url('https://i.pinimg.com/736x/4c/22/34/4c22340f2d00c017b871028b990a0c87.jpg'); border-bottom: 3px solid var(--text-dark);"></div>
+                    <h3 style="color: var(--primary-color);">Batman</h3>
+                </div>
+                <div style="flex: 1;">
+                    <div class="char-image" style="height: 500px; background-image: url('https://i.pinimg.com/736x/c0/a4/56/c0a456a238df462297898d307d314b2a.jpg'); border-bottom: 3px solid var(--accent-color);"></div>
+                    <h3 style="color: var(--primary-color);">Wonder Woman</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DC UNIVERSE: THE VAULT. Propiedad intelectual de DC Comics. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
