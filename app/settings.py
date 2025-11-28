@@ -34,7 +34,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'localhost',
     'practicadjango7735-gmfnbuabb2bedkfw.eastus2-01.azurewebsites.net'
 ]
 
